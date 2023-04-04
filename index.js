@@ -97,14 +97,11 @@ function moverBoneco() {
     corpoDoBoneco.style.left = 43 + "%";
     corpoDoBoneco.style.top = 40 + "%";
   }
-  // //posição-5
+  //posição-5
   else if (currentPosition > 400 && rect.bottom > 480) {
     corpoDoBoneco.style.left = -42 + "%";
   }
-  else{
-    corpoDoBoneco.style.top = 0 + "%";
-  }
-}
+ }
 //registrando o evento atrelado ao btn
 btn.addEventListener("click", mudarCor);
 btn.addEventListener("click", corDoBotao);
