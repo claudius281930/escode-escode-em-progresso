@@ -73,14 +73,36 @@ function mudarEffect() {
 let corpoDoBoneco = document.getElementById("main_container_boneco");
 
 function moverBoneco() {
-  if (corpoDoBoneco.style.left == 0) {
+  const rect = corpoDoBoneco.getBoundingClientRect();
+  const currentPosition = parseInt(
+    window.getComputedStyle(corpoDoBoneco).getPropertyValue("left")
+  );
+  //tela incial de 1038 px / 830 px
+  //posição-1
+  if (currentPosition == rect.y) {
     corpoDoBoneco.style.left = 25 + "%";
-  } 
-  else if (corpoDoBoneco.style.left !== 0) {
     corpoDoBoneco.style.top = 80 + "%";
-  } 
-  else if (corpoDoBoneco.style.top > 0) {
-    corpoDoBoneco.style.right = 50 + "%";
+  }
+  //posição-2
+  else if (currentPosition > 100 && rect.y > 600) {
+    corpoDoBoneco.style.left = -25 + "%";
+  }
+  //posição-3
+  else if (currentPosition < -250 && rect.bottom > 800) {
+    corpoDoBoneco.style.top = 0 + "%";
+    corpoDoBoneco.style.left = -1 + "%";
+  }
+  //posição-4
+  else if (currentPosition < 0 && rect.bottom > 150) {
+    corpoDoBoneco.style.left = 43 + "%";
+    corpoDoBoneco.style.top = 40 + "%";
+  }
+  // //posição-5
+  else if (currentPosition > 400 && rect.bottom > 480) {
+    corpoDoBoneco.style.left = -42 + "%";
+  }
+  else{
+    corpoDoBoneco.style.top = 0 + "%";
   }
 }
 //registrando o evento atrelado ao btn
