@@ -76,11 +76,11 @@ function moverBoneco() {
   if (corpoDoBoneco.style.left == 0) {
     corpoDoBoneco.style.left = 25 + "%";
   } 
-  else if (corpoDoBoneco.style.left !== 25) {
+  else if (corpoDoBoneco.style.left !== 0) {
     corpoDoBoneco.style.top = 80 + "%";
   } 
-  else if (corpoDoBoneco.style.top == 25) {
-    corpoDoBoneco.style.marginRight = 50 + "80%";
+  else if (corpoDoBoneco.style.top > 0) {
+    corpoDoBoneco.style.right = 50 + "%";
   }
 }
 //registrando o evento atrelado ao btn
