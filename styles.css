@@ -19,7 +19,7 @@ body {
   width: 20%;
   height: 20%;
   display: flex;
-  background: #23abcf;
+  background: transparent;
 }
 /* Pai */
 #containerMenbrosSuperiores {
