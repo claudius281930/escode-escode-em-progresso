@@ -91,7 +91,7 @@ function moverBoneco() {
   else if (currentPosition < 0
      && rect.y === 775.1875) {
     corpoDoBoneco.style.top = 0 + "%";
-    corpoDoBoneco.style.left = -.1 + "%";
+    corpoDoBoneco.style.left = -1.5 + "%";
   }
   //posição-3
   else if (currentPosition < 0 &&
